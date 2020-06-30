@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mercurial hg Commands Learning</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="loadOption.js"></script> 
+	</head>
+	<body>
+		<div style="text-align:center">
+			<form action="#" method="get">
+				<label style="color:white"> Command to </label>
+				<select name='CommandList' id="list" style="width:150px;" onchange="fillSelect(this.value,'situation')" data-first="blank"></select><br>
+				<label style="color:white"> Options are to </label>
+				<select name='SituationList' id="situation" style="width:400px;" onchange="displayCommand(this.value)" data-first="blank"></select>
+			</form>
+		</div>
+		<main id="container">
+	      <div id="terminal">
+	        <section id="terminal__bar">
+	          <div id="bar__buttons">
+	            <button class="bar__button" id="bar__button--exit">&#10005;</button>
+	            <button class="bar__button">&#9472;</button>
+	            <button class="bar__button">&#9723;</button>
+	          </div>
+	          <p id="bar__user">hgVCS@commands: ~</p>
+	        </section>
+	        <section id="terminal__body">
+	            <div id="terminal__prompt">
+	        		<span id="terminal__prompt--user">hgVCS@commands:</span>
+		            <span id="terminal__prompt--location">~</span>
+		            <span id="terminal__prompt--bling">$</span>
+		            <span id="command"></span>
+		            <span id="terminal__prompt--cursor"></span>
+		        </div>
+	        </section>
+	      </div>
+	    </main>
+	</body>
+</html>
